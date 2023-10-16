@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="783dp"
+        android:text="@string/order"
+        android:textAlignment="viewStart"
+        android:textAllCaps="true"
+        android:textColor="#0C090A"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.67" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edit"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:hint="What is your favorite drink"
+        app:helperText="must choice plz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/t1">
+
+        <AutoCompleteTextView
+            android:id="@+id/drinkorder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="176dp"
+            android:padding="16dp"
+            android:inputType="none"
+            >
+
+        </AutoCompleteTextView>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/b1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="submit order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/price" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="125dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:text="Total price : "
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/b1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit"
+        app:layout_constraintVertical_bias="0.035" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="52dp"
+
+        android:textSize="22sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/text"
+        app:layout_constraintTop_toBottomOf="@+id/edit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

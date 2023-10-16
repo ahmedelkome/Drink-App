@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name" translatable="false">Your Drink</string>
+    <string name="order" translatable="false">ORDER YOUR DRINK</string>
+</resources>
